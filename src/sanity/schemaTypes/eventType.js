@@ -1,6 +1,8 @@
 import { defineField, defineType } from "sanity";
 import { CgEventbrite } from "react-icons/cg";
 
+// Define the 'Event' document type for the CMS
+// This document represents an event with essential details such as name, date/time, location, description, and image.
 export const eventType = defineType({
   name: "event",
   title: "Event",

@@ -1,3 +1,5 @@
+// DateFormatter component – formats a given date string into Swedish (sv-SE)
+// Example output: "2025-05-08 14:30"
 const DateFormatter = ({ date, className }) => {
   return (
     <p className={className}>

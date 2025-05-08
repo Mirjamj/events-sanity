@@ -1,8 +1,9 @@
-import { About } from "./about"
+import { TextImg } from "./text-img"
 import { Events } from "./events"
 import { Hero } from "./hero"
-import { Home } from "./home"
+import { TextBtn } from "./text-btn"
 
+// Sections component - dynamically renders page sections based on the section type
 export const Sections = ({ sections }) => {
 
   return (
@@ -16,12 +17,13 @@ export const Sections = ({ sections }) => {
             case "eventsSection":
               return <Events key={section._key} title={section.title} />
 
-            case "contentSection":
-              return <About key={section._key} headline={section.headline} body={section.body} image={section.image} />
+            case "textImgBlock":
+              return <TextImg key={section._key} headline={section.headline} body={section.body} image={section.image} />
 
-            case "homeSection":
-              return <Home key={section._key} headline={section.headline} body={section.body} image={section.image} />
+            case "textBlock":
+              return <TextBtn key={section._key} headline={section.headline} body={section.body} image={section.image} />
 
+            // Return nothing if section type is unrecognized
             default: return null
           }
         })
